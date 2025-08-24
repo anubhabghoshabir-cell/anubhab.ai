@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Comedy Website</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h1>😂 Welcome to Anubhab's Comedy Site 😂</h1>
+  <p id="joke">Click below to get a random joke!</p>
+  <button onclick="tellJoke()">🤣 Tell Me a Joke</button>
+
+  <script>
+    const jokes = [
+      "Why don’t skeletons fight each other? Because they don’t have the guts!",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet.",
+      "I told my computer I needed a break, and now it won’t stop sending me KitKats."
+    ];
+    function tellJoke() {
+      const random = Math.floor(Math.random() * jokes.length);
+      document.getElementById('joke').innerText = jokes[random];
+    }
+  </script>
+</body>
+</html>
