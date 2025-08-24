@@ -3,111 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🤣 Unlimited Jokes Website 🤣</title>
+  <title>😂 Funny Jokes Website</title>
   <style>
     body {
-      font-family: "Comic Sans MS", cursive, sans-serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
-      background: #fffae6;
-      transition: background 0.8s ease;
-      overflow-x: hidden;
-    }
-    h1 {
-      background: #ff4d4d;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd, #c2e9fb);
+      background-size: 1000% 1000%;
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
       color: white;
-      padding: 15px;
-      margin: 0;
-      font-size: 28px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
     }
-    #joke-box {
-      margin: 30px auto;
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
       padding: 20px;
-      width: 90%;
-      max-width: 700px;
-      background: white;
       border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      animation: fadeIn 0.6s ease-in-out;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-    #joke-box img {
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+
+    #joke {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    #jokeImg {
       max-width: 100%;
       border-radius: 15px;
       margin-bottom: 15px;
     }
-    #joke-text {
-      font-size: 20px;
-      line-height: 1.5;
-    }
+
     button {
-      margin-top: 15px;
-      padding: 12px 25px;
-      font-size: 18px;
+      background: #ffcc00;
       border: none;
+      padding: 12px 20px;
       border-radius: 10px;
-      background: #ff4d4d;
-      color: white;
+      font-size: 16px;
       cursor: pointer;
-      transition: 0.3s;
+      font-weight: bold;
     }
+
     button:hover {
-      background: #e60000;
-      transform: scale(1.1);
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      background: #ffaa00;
     }
   </style>
 </head>
 <body>
-  <h1>😂 Welcome to Unlimited Comedy 😂</h1>
-
-  <div id="joke-box">
-    <img id="joke-img" src="" alt="Funny Meme">
-    <div id="joke-text">Click the button to get your first joke! 🤣</div>
+  <div class="container">
+    <h1>😂 Unlimited Jokes</h1>
+    <div id="joke">Click below to get a joke!</div>
+    <img id="jokeImg" src="" alt="" />
+    <button onclick="newJoke()">Next Joke 👉</button>
   </div>
-
-  <button onclick="newJoke()">Next Joke</button>
 
   <script>
     const jokes = [
-      {
-        text: "Teacher: Tum late kyun aaye? 🤔<br>Student: Sir, exam ke sapne me pass ho gaya tha, party chal rahi thi! 🎉",
-        img: "https://i.imgflip.com/30zz5g.jpg"
-      },
-      {
-        text: "Doctor: Aapko kis cheez se allergy hai?<br>Patient: Homework se! 📚❌",
-        img: "https://i.imgflip.com/4/2v4z.jpg"
-      },
-      {
-        text: "GF: Tum mujhe miss karte ho?<br>BF: Haan WhatsApp pe, real life me to shanti hai 😅",
-        img: "https://i.imgflip.com/1otk96.jpg"
-      },
-      {
-        text: "Boss: Tum kaam me itne slow kyun ho?<br>Employee: Sir, internet ki tarah hu… buffering pe hu! 🌀",
-        img: "https://i.imgflip.com/5hg3.jpg"
-      },
-      {
-        text: "Wife: Kya tum mujhe chand tak le jaoge?<br>Husband: Pehle petrol ka rate dekh lo! ⛽😂",
-        img: "https://i.imgflip.com/1bij.jpg"
-      }
+      { text: "Teacher: Tum late kyun aaye?<br>Student: Sir ghadi hi ruk gayi thi! 😂", img: "https://i.imgflip.com/43a45p.jpg" },
+      { text: "Mummy: Padhai kar le!<br>Main: Mummy Google bhi thak gaya mere questions se 😅", img: "https://i.imgflip.com/4acd7j.jpg" },
+      { text: "Exam hall me likha: 'Answer soch samajh kar do'<br>Main: Arre mere paas to soch hi nahi hai! 😂", img: "https://i.imgflip.com/2wifvo.jpg" },
+      { text: "Girlfriend: Tum mujhe gift kya doge?<br>Boyfriend: Whatsapp pe unlimited '❤️' bhej dunga 😍", img: "https://i.imgflip.com/3t3nq5.jpg" },
+      { text: "Online class ka asli maza — camera off karke so jaana 😴😂", img: "https://i.imgflip.com/43a45y.jpg" },
+      { text: "Papa: Result kaisa hai?<br>Main: Papa paper hi samajh nahi aaya 😅", img: "https://i.imgflip.com/3t3nph.jpg" },
+      { text: "School me bench ke neeche chipka hua chewing gum sabko yaad hai 😂", img: "https://i.imgflip.com/3t3nm3.jpg" },
+      { text: "Gym join kiya… 3 din me bas selfie hi banayi 📸💪😂", img: "https://i.imgflip.com/4acdx2.jpg" },
+      { text: "Cricket me last ball pe six maarne ka maza hi alag hai 🏏🔥", img: "https://i.imgflip.com/3t3nrl.jpg" },
+      { text: "Mummy: Beta doodh pi lo!<br>Main: Mummy mujhe protein shake chahiye 💪😂", img: "https://i.imgflip.com/3t3nql.jpg" },
+      // 🔥 Tum yaha aur jokes add kar sakte ho (total 100+ copy paste karke)
     ];
 
-    const colors = ["#fff0f5", "#e6f7ff", "#e6ffe6", "#fff5e6", "#ffe6f0"];
-
     function newJoke() {
-      const random = jokes[Math.floor(Math.random() * jokes.length)];
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      document.getElementById("joke-text").innerHTML = random.text;
-      document.getElementById("joke-img").src = random.img;
-      document.body.style.background = randomColor;
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      const jokeObj = jokes[randomIndex];
+      document.getElementById("joke").innerHTML = jokeObj.text;
+      document.getElementById("jokeImg").src = jokeObj.img;
     }
-
-    // Auto change jokes every 7 seconds
-    setInterval(newJoke, 7000);
   </script>
 </body>
 </html>
