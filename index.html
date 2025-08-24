@@ -3,70 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>😂 Anubhab Comedy Show 😂</title>
+  <title>Comedy Zone</title>
   <style>
     body {
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      background: linear-gradient(135deg, #ffe259, #ffa751);
+      font-family: Arial, sans-serif;
+      background: #fff8dc;
       text-align: center;
-      padding: 50px;
+      margin: 0;
+      padding: 0;
     }
     h1 {
-      font-size: 3em;
-      color: #ff1e56;
-      text-shadow: 2px 2px yellow;
+      color: #ff4500;
+      margin: 20px 0;
     }
-    p {
-      font-size: 1.5em;
-      color: #333;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
-    button {
-      background: #ff1e56;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 1.2em;
-      border-radius: 12px;
-      cursor: pointer;
-      margin-top: 20px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    .joke-card {
+      width: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: #fff;
       transition: 0.3s;
     }
-    button:hover {
-      background: #ff5e78;
-      transform: scale(1.1);
+    .joke-card:hover {
+      transform: scale(1.05);
     }
-    #joke {
-      margin-top: 30px;
-      font-size: 1.8em;
-      color: #004d40;
-      font-weight: bold;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+    .joke-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .joke-card p {
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>😂 Welcome to Anubhab Comedy Show 😂</h1>
-  <p>Press the button below for instant comedy dose!</p>
-  <button onclick="tellJoke()">🤣 Give Me a Joke 🤣</button>
-  <div id="joke"></div>
+  <h1>🤣 Welcome to Comedy Zone 🤣</h1>
 
-  <script>
-    const jokes = [
-      "Teacher: Tum exam me late kyun aaye? 🤔<br> Student: Sir paper me likha tha 'Answer in brief'... to brief me late ho gaya! 😂",
-      "Doctor: Aapko araam ki zarurat hai.<br> Patient: Doctor sahab, araam ka to loan chahiye tha, dawa kyun de diya? 🤣",
-      "Pappu: Pyar andha hota hai...<br> Gappu: Aur shaadi aankh khol deti hai! 😂",
-      "Friend: Aaj kal tu itna hans kyun raha hai?<br> Me: Kyunki hansna free hai, tax sirf income pe lagta hai! 🤣",
-      "Wife: Tum mujhe kabse ignore kar rahe ho!<br> Husband: Jabse mobile me 'Do Not Disturb' option aaya hai... 😂"
-    ];
+  <div class="container">
+    <div class="joke-card">
+      <img src="https://i.imgur.com/fnY7j1d.jpeg" alt="Funny Meme">
+      <p>Teacher: Tum exam me kya likh kar aaye?<br>
+      Student: Sir, pen se likha hai!</p>
+    </div>
 
-    function tellJoke() {
-      const randomIndex = Math.floor(Math.random() * jokes.length);
-      document.getElementById("joke").innerHTML = jokes[randomIndex];
-    }
-  </script>
+    <div class="joke-card">
+      <img src="https://i.imgur.com/0rjWQ2T.jpeg" alt="Funny Meme">
+      <p>Doctor: Aapko kis cheez se allergy hai?<br>
+      Patient: Homework se, doctor saab!</p>
+    </div>
+
+    <div class="joke-card">
+      <img src="https://i.imgur.com/Xl0a8wX.jpeg" alt="Funny Meme">
+      <p>GF: Tum mujhe duniya ki sabse khoobsurat ladki samajhte ho?<br>
+      BF: Nahi, filter lagana padega!</p>
+    </div>
+
+    <div class="joke-card">
+      <img src="https://i.imgur.com/HYLP0nN.jpeg" alt="Funny Meme">
+      <p>Boss: Tum late kyun aaye ho?<br>
+      Employee: Sir, alarm clock khud snooze ho gaya tha!</p>
+    </div>
+  </div>
 </body>
 </html>
